@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Easy Wine — Privacy Policy</title>
+<link rel="stylesheet" href="legal.css">
+<!-- Records that scripting is on before anything paints, so the stacked no-JS layout never flashes. -->
+<script>document.documentElement.className = 'js';</script>
+</head>
+<body>
+
+<!-- Host this file (GitHub Pages) and use its URL in App Store Connect and in the app's paywall.
+     Unlike EasyCook there is no in-app copy of this text to drift from: the app links out to the
+     hosted page, so this file is the only wording there is. Section 2 must keep matching the
+     notice shown before the first scan (Strings.Notice.body) and the App Privacy answers in
+     docs/TESTFLIGHT.md — those three are the ones a reviewer can hold side by side. -->
+
+<section data-lang="en" data-title="Easy Wine — Privacy Policy">
+<h1>Easy Wine — Privacy Policy</h1>
+<p class="muted">Effective date: 12 August 2026</p>
+
+<p>This policy explains what data the Easy Wine app handles and how. The app has no sign-up, no user accounts, and never asks for your name, email address or telephone number.</p>
+
+<h2>1. Data stored only on your device</h2>
+<p>Your taste preferences and budget, your scan history together with the shelf photographs in it, your favourites, and your language, theme and scanner settings are stored locally on your device. We do not receive or store them on our servers. They are removed when you delete the app.</p>
+
+<h2>2. Photographs of shelves</h2>
+<p>When you scan, the photograph is sent through our server to <strong>Google Gemini</strong>, which reads the labels and returns what it recognised. Your taste preferences and budget are sent with it as part of the question, so that the answer can be ranked for you.</p>
+<p>We do not keep the photograph: our server passes it on and stores only the counters described in section 3. <strong>Google may use the photographs and the questions sent with them to improve its models</strong>, under the terms of the Gemini API tier we use. This is also stated in the app before your first scan. Photograph a shelf, not people — and do not photograph anything you would not want processed this way.</p>
+
+<h2>3. Data our server stores</h2>
+<p>Against an anonymous identifier only — there is no account to attach it to:</p>
+<ul>
+  <li><strong>An anonymous sign-in identifier</strong>, issued by Firebase Authentication. It carries no personal data and is replaced if you reinstall the app.</li>
+  <li><strong>A device identifier</strong> derived on your device and stored as a hash. It is what lets a free allowance survive a reinstall, and what you can send us to be granted a complimentary subscription.</li>
+  <li><strong>Counters</strong>: how many scans were made, and what they cost us to run. Numbers, not content.</li>
+  <li><strong>Your subscription status</strong>: which product, when it expires, and Apple's transaction identifier for it. See section 4.</li>
+  <li><strong>A notification token</strong>, only if you turn on reminders, so that a reminder can be delivered.</li>
+</ul>
+
+<h2>4. Purchases</h2>
+<p>Subscriptions are processed by Apple (App Store). We never see your payment details. What we receive is the signed receipt Apple issues, which we verify on our server so that a subscription cannot be faked; from it we store the product, the expiry date and Apple's transaction identifier.</p>
+
+<h2>5. Diagnostics and usage</h2>
+<ul>
+  <li><strong>Firebase Crashlytics</strong> — crash and performance reports, so failures can be fixed.</li>
+  <li><strong>Firebase Analytics</strong> — anonymous usage events (a scan started, a screen opened, a purchase completed). Google derives an approximate location, at country and city level, from the network address; we neither request nor receive your device's location.</li>
+</ul>
+<p>None of it is linked to your identity, and none of it is used for advertising or for tracking you across other companies' apps and websites. The app contains no advertising and no advertising identifier.</p>
+
+<h2>6. Sharing</h2>
+<p>We do not sell your data. It is processed by Google — Firebase as our service provider, and Gemini as the recognition service described in section 2 — and by Apple for payments. No advertising networks are involved.</p>
+
+<h2>7. Retention and deletion</h2>
+<p>Deleting the app removes everything held on your device. Server-side counters and the subscription record are kept against the anonymous identifier while the app is installed; diagnostics and analytics are retained according to Firebase's own defaults. To have anything associated with your device deleted, send us the diagnostic code shown in Settings and write to dev.alexey.tarasoff@gmail.com.</p>
+
+<h2>8. Age</h2>
+<p>Easy Wine is about alcoholic drinks and is rated for adults. It is not directed to children, and we do not knowingly collect their data.</p>
+
+<h2>9. Changes</h2>
+<p>We may update this policy; the effective date above will change accordingly.</p>
+
+<h2>10. Contact</h2>
+<p>Questions: dev.alexey.tarasoff@gmail.com</p>
+</section>
+
+<section data-lang="ru" lang="ru" data-title="Easy Wine — Политика конфиденциальности">
+<h1>Easy Wine — Политика конфиденциальности</h1>
+<p class="muted">Дата вступления в силу: 12 августа 2026</p>
+
+<p>Эта политика описывает, какие данные обрабатывает приложение Easy Wine. В приложении нет регистрации и аккаунтов; мы не спрашиваем ни имя, ни почту, ни телефон.</p>
+
+<h2>1. Данные, которые хранятся только на устройстве</h2>
+<p>Ваши вкусовые предпочтения и бюджет, история сканов вместе с фотографиями полок, избранное, а также язык, тема и настройки сканера хранятся локально на вашем устройстве. Мы не получаем и не храним их на своих серверах. Они удаляются вместе с приложением.</p>
+
+<h2>2. Фотографии полок</h2>
+<p>Когда вы сканируете полку, фотография уходит через наш сервер в <strong>Google Gemini</strong>: он читает этикетки и возвращает распознанное. Вместе с ней передаются ваши вкусовые предпочтения и бюджет — как часть вопроса, чтобы ответ был отсортирован под вас.</p>
+<p>Фотографию мы у себя не храним: сервер передаёт её дальше и сохраняет только счётчики из раздела 3. <strong>Google вправе использовать фотографии и заданные с ними вопросы для улучшения своих моделей</strong> — на условиях того тарифа Gemini API, которым мы пользуемся. То же самое сказано в приложении перед первым сканом. Снимайте полку, а не людей, и не снимайте того, что не хотели бы отправлять на такую обработку.</p>
+
+<h2>3. Данные, которые хранит наш сервер</h2>
+<p>Только против анонимного идентификатора — привязывать их не к чему, аккаунта нет:</p>
+<ul>
+  <li><strong>Анонимный идентификатор входа</strong>, выданный Firebase Authentication. Личных данных не несёт и заменяется при переустановке приложения.</li>
+  <li><strong>Идентификатор устройства</strong>, вычисленный на устройстве и сохранённый в виде хеша. Именно он позволяет бесплатным сканам пережить переустановку, и его же можно прислать нам, чтобы получить подписку в подарок.</li>
+  <li><strong>Счётчики</strong>: сколько сканов сделано и во сколько они нам обошлись. Числа, не содержимое.</li>
+  <li><strong>Статус подписки</strong>: какой продукт, до какого числа и идентификатор транзакции Apple. См. раздел 4.</li>
+  <li><strong>Токен уведомлений</strong> — только если вы включили напоминания, чтобы напоминание могло дойти.</li>
+</ul>
+
+<h2>4. Покупки</h2>
+<p>Подписки обрабатывает Apple (App Store). Платёжных данных мы не видим никогда. К нам приходит подписанный Apple чек, который мы проверяем на своём сервере, чтобы подписку нельзя было подделать; из него сохраняются продукт, дата окончания и идентификатор транзакции Apple.</p>
+
+<h2>5. Диагностика и использование</h2>
+<ul>
+  <li><strong>Firebase Crashlytics</strong> — отчёты о сбоях и производительности, чтобы чинить ошибки.</li>
+  <li><strong>Firebase Analytics</strong> — анонимные события использования (скан начался, экран открыт, покупка совершена). По сетевому адресу Google определяет приблизительное местоположение с точностью до страны и города; собственную геолокацию устройства мы не запрашиваем и не получаем.</li>
+</ul>
+<p>Ничто из этого не привязано к вашей личности и не используется ни для рекламы, ни для слежения за вами в чужих приложениях и сайтах. Рекламы и рекламного идентификатора в приложении нет.</p>
+
+<h2>6. Передача данных</h2>
+<p>Мы не продаём ваши данные. Их обрабатывает Google — Firebase как наш поставщик услуг и Gemini как сервис распознавания из раздела 2 — и Apple для платежей. Рекламные сети не участвуют.</p>
+
+<h2>7. Хранение и удаление</h2>
+<p>Удаление приложения убирает всё, что лежало на устройстве. Серверные счётчики и запись о подписке хранятся против анонимного идентификатора, пока приложение установлено; диагностика и аналитика — по умолчанию Firebase. Чтобы удалить связанное с вашим устройством, пришлите код диагностики из настроек на dev.alexey.tarasoff@gmail.com.</p>
+
+<h2>8. Возраст</h2>
+<p>Easy Wine — приложение об алкогольных напитках, с возрастным рейтингом для взрослых. Детям оно не адресовано, и мы сознательно не собираем их данные.</p>
+
+<h2>9. Изменения</h2>
+<p>Мы можем обновлять эту политику; дата вступления в силу выше будет соответственно меняться.</p>
+
+<h2>10. Контакты</h2>
+<p>Вопросы: dev.alexey.tarasoff@gmail.com</p>
+</section>
+
+<section data-lang="es" lang="es" data-title="Easy Wine — Política de privacidad">
+<h1>Easy Wine — Política de privacidad</h1>
+<p class="muted">Fecha de entrada en vigor: 12 de agosto de 2026</p>
+
+<p>Esta política describe qué datos trata la aplicación Easy Wine. La aplicación no tiene registro ni cuentas de usuario, y nunca pide tu nombre, tu correo electrónico ni tu teléfono.</p>
+
+<h2>1. Datos que se guardan solo en tu dispositivo</h2>
+<p>Tus preferencias de gusto y tu presupuesto, el historial de escaneos junto con las fotografías de estanterías que contiene, tus favoritos y los ajustes de idioma, tema y escáner se guardan localmente en tu dispositivo. No los recibimos ni los almacenamos en nuestros servidores. Se eliminan al desinstalar la aplicación.</p>
+
+<h2>2. Fotografías de estanterías</h2>
+<p>Al escanear, la fotografía se envía a través de nuestro servidor a <strong>Google Gemini</strong>, que lee las etiquetas y devuelve lo que ha reconocido. Tus preferencias de gusto y tu presupuesto se envían con ella como parte de la pregunta, para que la respuesta se ordene pensando en ti.</p>
+<p>Nosotros no conservamos la fotografía: nuestro servidor la transmite y guarda únicamente los contadores del apartado 3. <strong>Google puede usar las fotografías y las preguntas enviadas con ellas para mejorar sus modelos</strong>, según las condiciones del nivel de la API de Gemini que utilizamos. Esto también se indica en la aplicación antes del primer escaneo. Fotografía la estantería, no a personas, y no fotografíes nada que no quieras que se procese así.</p>
+
+<h2>3. Datos que guarda nuestro servidor</h2>
+<p>Solo frente a un identificador anónimo: no hay ninguna cuenta a la que vincularlos.</p>
+<ul>
+  <li><strong>Un identificador de inicio de sesión anónimo</strong>, emitido por Firebase Authentication. No contiene datos personales y se sustituye si reinstalas la aplicación.</li>
+  <li><strong>Un identificador de dispositivo</strong>, calculado en tu dispositivo y guardado como hash. Es lo que permite que la cuota gratuita sobreviva a una reinstalación, y lo que puedes enviarnos para recibir una suscripción de regalo.</li>
+  <li><strong>Contadores</strong>: cuántos escaneos se han hecho y cuánto nos han costado. Números, no contenido.</li>
+  <li><strong>El estado de tu suscripción</strong>: qué producto, hasta cuándo y el identificador de transacción de Apple. Véase el apartado 4.</li>
+  <li><strong>Un token de notificaciones</strong>, solo si activas los recordatorios, para que el recordatorio pueda llegar.</li>
+</ul>
+
+<h2>4. Compras</h2>
+<p>Las suscripciones las procesa Apple (App Store). Nunca vemos tus datos de pago. Lo que recibimos es el recibo firmado que emite Apple, que verificamos en nuestro servidor para que una suscripción no se pueda falsificar; de él guardamos el producto, la fecha de caducidad y el identificador de transacción de Apple.</p>
+
+<h2>5. Diagnóstico y uso</h2>
+<ul>
+  <li><strong>Firebase Crashlytics</strong> — informes de fallos y de rendimiento, para poder corregir errores.</li>
+  <li><strong>Firebase Analytics</strong> — eventos de uso anónimos (un escaneo iniciado, una pantalla abierta, una compra completada). A partir de la dirección de red, Google deduce una ubicación aproximada a nivel de país y ciudad; nosotros no solicitamos ni recibimos la ubicación de tu dispositivo.</li>
+</ul>
+<p>Nada de esto está vinculado a tu identidad ni se usa para publicidad ni para seguirte por aplicaciones y sitios de otras empresas. La aplicación no contiene publicidad ni identificador publicitario.</p>
+
+<h2>6. Cesión de datos</h2>
+<p>No vendemos tus datos. Los trata Google — Firebase como proveedor de servicios y Gemini como el servicio de reconocimiento del apartado 2 — y Apple para los pagos. No intervienen redes publicitarias.</p>
+
+<h2>7. Conservación y eliminación</h2>
+<p>Desinstalar la aplicación elimina todo lo que había en el dispositivo. Los contadores del servidor y el registro de la suscripción se conservan frente al identificador anónimo mientras la aplicación esté instalada; el diagnóstico y la analítica, según los valores predeterminados de Firebase. Para eliminar lo asociado a tu dispositivo, envía el código de diagnóstico que aparece en los ajustes a dev.alexey.tarasoff@gmail.com.</p>
+
+<h2>8. Edad</h2>
+<p>Easy Wine trata sobre bebidas alcohólicas y tiene una clasificación por edades para adultos. No está dirigida a menores y no recogemos sus datos de forma consciente.</p>
+
+<h2>9. Cambios</h2>
+<p>Podemos actualizar esta política; la fecha de entrada en vigor indicada arriba cambiará en consecuencia.</p>
+
+<h2>10. Contacto</h2>
+<p>Preguntas: dev.alexey.tarasoff@gmail.com</p>
+</section>
+
+<script src="lang.js"></script>
+</body>
+</html>

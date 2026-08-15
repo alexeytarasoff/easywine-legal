@@ -1,0 +1,27 @@
+/* Shared by every page in this directory. Static hosting, no build step — one stylesheet instead of
+   the same block pasted into four files, which is how the four had already drifted apart. */
+
+body { font: 16px/1.6 -apple-system, system-ui, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; color: #1a1a1a; }
+h1 { font-size: 1.6rem; }
+h2 { font-size: 1.15rem; margin-top: 1.6rem; }
+a { color: #d97a00; }
+.muted { color: #666; }
+
+/* The switcher is built by lang.js, so with scripting off there is no dead control to click. */
+.langs { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0 0 2.5rem; }
+.langs a { padding: .35rem .9rem; border: 1px solid #ddd; border-radius: 999px; text-decoration: none; color: #1a1a1a; font-size: .95rem; }
+.langs a[aria-current="true"] { background: #d97a00; border-color: #d97a00; color: #fff; }
+
+/* No JavaScript: nothing is hidden and the page reads as one document stacked in all three languages,
+   which is what it did before the switcher existed. The rule separates those stacked copies; the `.js`
+   variant below drops the separator once only one of them is on screen. The class is set in <head> so
+   the stacked layout never flashes before the script at the end of <body> runs. */
+[data-lang] + [data-lang] { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #ddd; }
+.js [data-lang] + [data-lang] { margin-top: 0; padding-top: 0; border-top: none; }
+
+@media (prefers-color-scheme: dark) {
+  body { background: #141414; color: #e8e8e8; }
+  .muted { color: #9a9a9a; }
+  .langs a { border-color: #333; color: #e8e8e8; }
+  [data-lang] + [data-lang] { border-top-color: #333; }
+}

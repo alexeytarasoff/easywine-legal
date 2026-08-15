@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Easy Wine — Legal</title>
+<link rel="stylesheet" href="legal.css">
+<!-- Records that scripting is on before anything paints, so the stacked no-JS layout never flashes. -->
+<script>document.documentElement.className = 'js';</script>
+<style>
+  /* The index is a list of links rather than prose, so its anchors sit on their own lines. Scoped to
+     `section` so it can't reach the switcher pills, which lang.js inserts as a sibling of the sections. */
+  section a { display: block; margin: .6rem 0; font-size: 1.1rem; }
+</style>
+</head>
+<body>
+
+<!-- The root of the Pages site. Nothing links here — the app and the store listing point at the
+     individual documents — but a site whose front door is a 404 looks abandoned to anyone who
+     trims the URL, and a reviewer is exactly the sort of person who does. -->
+
+<section data-lang="en" data-title="Easy Wine — Legal">
+<h1>Easy Wine — Legal</h1>
+<p class="muted">Documents for the Easy Wine app.</p>
+<a href="privacy-policy.html#en">Privacy Policy</a>
+<a href="terms.html#en">Terms of Use</a>
+<a href="support.html#en">Support</a>
+<p class="muted">Contact: dev.alexey.tarasoff@gmail.com</p>
+</section>
+
+<section data-lang="ru" lang="ru" data-title="Easy Wine — Документы">
+<h1>Easy Wine — Документы</h1>
+<p class="muted">Документы приложения Easy Wine.</p>
+<a href="privacy-policy.html#ru">Политика конфиденциальности</a>
+<a href="terms.html#ru">Условия использования</a>
+<a href="support.html#ru">Поддержка</a>
+<p class="muted">Связь: dev.alexey.tarasoff@gmail.com</p>
+</section>
+
+<section data-lang="es" lang="es" data-title="Easy Wine — Documentos">
+<h1>Easy Wine — Documentos</h1>
+<p class="muted">Documentos de la aplicación Easy Wine.</p>
+<a href="privacy-policy.html#es">Política de privacidad</a>
+<a href="terms.html#es">Condiciones de uso</a>
+<a href="support.html#es">Soporte</a>
+<p class="muted">Contacto: dev.alexey.tarasoff@gmail.com</p>
+</section>
+
+<script src="lang.js"></script>
+</body>
+</html>
