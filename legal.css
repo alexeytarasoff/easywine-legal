@@ -1,16 +1,23 @@
 /* Shared by every page in this directory. Static hosting, no build step — one stylesheet instead of
-   the same block pasted into four files, which is how the four had already drifted apart. */
+   the same block pasted into four files, which is how the four had already drifted apart.
+
+   The accent is the app's own: #5E3341, the muted wine `Colors.accent` uses, and #96626F in the
+   dark, which is the same wine lifted because it is nearly black on black. These pages arrived
+   from EasyCook and kept its orange for a while — a link on our own policy page in another app's
+   colour, on the one surface a person reads to decide whether to trust us. Two literals rather
+   than a variable each side, because there is no build step here and a custom property would be
+   one more thing to keep in step with Swift by hand either way. */
 
 body { font: 16px/1.6 -apple-system, system-ui, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; color: #1a1a1a; }
 h1 { font-size: 1.6rem; }
 h2 { font-size: 1.15rem; margin-top: 1.6rem; }
-a { color: #d97a00; }
+a { color: #5E3341; }
 .muted { color: #666; }
 
 /* The switcher is built by lang.js, so with scripting off there is no dead control to click. */
 .langs { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0 0 2.5rem; }
 .langs a { padding: .35rem .9rem; border: 1px solid #ddd; border-radius: 999px; text-decoration: none; color: #1a1a1a; font-size: .95rem; }
-.langs a[aria-current="true"] { background: #d97a00; border-color: #d97a00; color: #fff; }
+.langs a[aria-current="true"] { background: #5E3341; border-color: #5E3341; color: #fff; }
 
 /* No JavaScript: nothing is hidden and the page reads as one document stacked in all three languages,
    which is what it did before the switcher existed. The rule separates those stacked copies; the `.js`
@@ -22,6 +29,10 @@ a { color: #d97a00; }
 @media (prefers-color-scheme: dark) {
   body { background: #141414; color: #e8e8e8; }
   .muted { color: #9a9a9a; }
+  /* The lifted wine, and dark type on it: white on #96626F is about 4.3:1, which is thin for the
+     small text in a pill, while the page's own near-black is comfortably past 7:1. */
+  a { color: #96626F; }
   .langs a { border-color: #333; color: #e8e8e8; }
+  .langs a[aria-current="true"] { background: #96626F; border-color: #96626F; color: #141414; }
   [data-lang] + [data-lang] { border-top-color: #333; }
 }
