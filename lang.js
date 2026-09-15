@@ -2,7 +2,7 @@
 // in the HTML; this only decides which one is shown, so there is nothing to build and nothing to fetch.
 //
 // Progressive enhancement on purpose. With scripting off no section is hidden and the whole document is
-// there in all three languages — a privacy policy that a store reviewer or a crawler can only read by
+// there in every language — a privacy policy that a store reviewer or a crawler can only read by
 // running scripts would be a bad trade for a nicer control.
 //
 // The choice lives in the URL fragment rather than storage: #es is shareable, so a store listing can
@@ -11,19 +11,29 @@
   var sections = document.querySelectorAll('[data-lang]');
   if (!sections.length) return;
 
-  var NAMES = { ru: 'Русский', en: 'English', es: 'Español' };
+  var NAMES = { en: 'English', ru: 'Русский', es: 'Español', de: 'Deutsch', fr: 'Français',
+                it: 'Italiano', nl: 'Nederlands', pt: 'Português', uk: 'Українська' };
   var available = [];
   for (var i = 0; i < sections.length; i++) {
     available.push(sections[i].getAttribute('data-lang'));
   }
 
+  // "pt-br" and "pt-BR" find the one Portuguese section: a region narrows a language, and a page
+  // written for the language serves every region of it.
+  function match(raw) {
+    var code = String(raw).toLowerCase();
+    if (available.indexOf(code) !== -1) return code;
+    var base = code.split('-')[0];
+    return available.indexOf(base) !== -1 ? base : null;
+  }
+
   function preferred() {
-    var fromHash = location.hash.replace('#', '').toLowerCase();
-    if (available.indexOf(fromHash) !== -1) return fromHash;
+    var fromHash = match(location.hash.replace('#', ''));
+    if (fromHash) return fromHash;
     var accepted = navigator.languages || [navigator.language || ''];
     for (var i = 0; i < accepted.length; i++) {
-      var code = String(accepted[i]).slice(0, 2).toLowerCase();
-      if (available.indexOf(code) !== -1) return code;
+      var code = match(accepted[i]);
+      if (code) return code;
     }
     return available.indexOf('en') !== -1 ? 'en' : available[0];
   }
