@@ -12,14 +12,16 @@
   if (!sections.length) return;
 
   var NAMES = { en: 'English', ru: 'Русский', es: 'Español', de: 'Deutsch', fr: 'Français',
-                it: 'Italiano', nl: 'Nederlands', pt: 'Português', uk: 'Українська' };
+                it: 'Italiano', nl: 'Nederlands', pt: 'Português (Brasil)', uk: 'Українська' };
   var available = [];
   for (var i = 0; i < sections.length; i++) {
     available.push(sections[i].getAttribute('data-lang'));
   }
 
   // "pt-br" and "pt-BR" find the one Portuguese section: a region narrows a language, and a page
-  // written for the language serves every region of it.
+  // written for the language serves every region of it. That section is written in Brazilian
+  // Portuguese and says so (`lang="pt-BR"`, the switcher's label); it is served to "pt-pt" as well
+  // (the owner's decision of 2026-09-26) — the fragment stays `#pt`, which the app links to.
   function match(raw) {
     var code = String(raw).toLowerCase();
     if (available.indexOf(code) !== -1) return code;
@@ -49,7 +51,9 @@
         document.title = section.getAttribute('data-title');
       }
     }
-    document.documentElement.setAttribute('lang', lang);
+    // The section's own `lang` where it has one ("pt-BR"), not the fragment it is reached by.
+    var shown = document.querySelector('[data-lang="' + lang + '"]');
+    document.documentElement.setAttribute('lang', (shown && shown.getAttribute('lang')) || lang);
     var links = document.querySelectorAll('.langs a');
     for (var j = 0; j < links.length; j++) {
       links[j].setAttribute('aria-current', links[j].getAttribute('href') === '#' + lang ? 'true' : 'false');
@@ -62,7 +66,7 @@
   for (var k = 0; k < available.length; k++) {
     var link = document.createElement('a');
     link.href = '#' + available[k];
-    link.setAttribute('lang', available[k]);
+    link.setAttribute('lang', sections[k].getAttribute('lang') || available[k]);
     link.textContent = NAMES[available[k]] || available[k];
     nav.appendChild(link);
   }
